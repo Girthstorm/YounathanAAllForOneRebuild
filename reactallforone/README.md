@@ -1,3 +1,18 @@
+Aidan Younathan
+All For One React Rebuild
+2/11/14
+Brief: I rebuilt my previous all for one project in react
+Peer Reviewer: Ellie Rasuli
+Peer Review:
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

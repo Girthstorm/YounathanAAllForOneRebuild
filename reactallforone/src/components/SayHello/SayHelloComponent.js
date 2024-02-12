@@ -1,9 +1,15 @@
 import React, { useState } from 'react'
+import { sayHelloApi } from '../../Services/DataService';
 
 export default function SayHelloComponent() {
 
     const [name, setName] = useState('');
     const [message, setMessage] = useState('Can’t press me, huh?');
+    const sayIt = async () => {
+        const data = await sayHelloApi(name);
+        setMessage(data);
+    };
+
     return (
         <div>
             <p className="text-center pt-8 text-5xl font-bold">Say Hello</p>
@@ -26,7 +32,7 @@ export default function SayHelloComponent() {
                         <button
                             type="button"
                             className="text-white w-44 h-20 lg:w-64 lg:h-20 text-2xl lg:text-3xl bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg px-5 py-2.5 text-center me-2 mb-2"
-                            onClick={''}
+                            onClick={sayIt}
                         >
                             Ready
                         </button>

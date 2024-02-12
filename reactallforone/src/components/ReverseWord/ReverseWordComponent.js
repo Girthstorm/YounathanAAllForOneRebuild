@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
+import { revWordApi } from '../../Services/DataService';
 
 export default function ReverseWordComponent() {
 
     const [word, setWord] = useState('');
     const [reversedWord, setReversedWord] = useState('And its funny because eeffoc. Just click the button already.');
+    const revWord = async () => {
+        const data = await revWordApi(word);
+        setReversedWord(data);
+    };
+
     return (
         <div>
             <p className="text-center pt-8 text-5xl font-bold">Reverse Word</p>
@@ -26,7 +32,7 @@ export default function ReverseWordComponent() {
                         <button
                             type="button"
                             className="text-white w-44 h-20 lg:w-64 lg:h-20 text-2xl lg:text-3xl bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg px-5 py-2.5 text-center me-2 mb-2"
-                            onClick={''} //This is where you would put your function plust the word variable
+                            onClick={revWord} //This is where you would put your function plust the word variable
                         >
                             Ready
                         </button>

@@ -5,7 +5,7 @@ Brief: I rebuilt my previous all for one project in react
 Peer Reviewer: Ellie Rasuli
 Peer Review:
 
-
+Everything looks pretty good, I guess some things could be fixed but its just little details and the majority of the wweasbite looks good. Good job!!!
 
 
 
